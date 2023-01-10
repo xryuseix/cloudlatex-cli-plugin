@@ -207,12 +207,16 @@ export class SyncManager extends EventEmitter<EventType> {
         file.changeLocation === 'local' ||
         (file.changeLocation === 'both' && remoteSyncMode === 'upload')
       ) {
-        const task = this.syncWithLocalTask(file);
-        tasks.push(task);
-        this.logger.log(`Push: ${file.relativePath} ${task.name}`);
-
-        if (!file.isFolder) {
-          this.fileChanged = true;
+        if (path.basename(file.relativePath)?.[0] !== '.') {
+          const task = this.syncWithLocalTask(file);
+          tasks.push(task);
+          this.logger.log(`Push: ${file.relativePath} ${task.name}`);
+  
+          if (!file.isFolder) {
+            this.fileChanged = true;
+          }
+        } else {
+          this.logger.log(`Skip: ${file.relativePath}`);
         }
       }
     });

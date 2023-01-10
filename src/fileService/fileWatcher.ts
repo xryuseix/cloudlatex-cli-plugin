@@ -20,7 +20,7 @@ export class FileWatcher extends EventEmitter<EventType> {
 
   public init(): Promise<void> {
     const watcherOption: chokidar.WatchOptions = {
-      ignored: /\.git|\.cloudlatex\.json|synctex\.gz|\.vscode(\\|\/|$)|.DS_Store/, //#TODO
+      ignored: /\.git|\.cloudlatex\.json|synctex\.gz|\.vscode(\\|\/|$)|\.DS_Store|\.node_modules(\\|\/|$)/, //#TODO
       awaitWriteFinish: {
         stabilityThreshold: 500,
         pollInterval: 100
