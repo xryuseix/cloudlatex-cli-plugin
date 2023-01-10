@@ -10,9 +10,6 @@ You can write tex files with your favorite editor and compile them without insta
 
 If you use VSCode, you can use [Cloud LaTeX VSCode Extension](https://github.com/cloudlatex-team/cloudlatex-vscode-extension).
 
-<details>
-<summary>⚠Following sections is under development and not completed. </summary>
-
 ## このレポジトリは[cloudlatex-cli-plugin](https://github.com/cloudlatex-team/cloudlatex-cli-plugin)からフォークされています
 
 [issues/27](https://github.com/cloudlatex-team/cloudlatex-cli-plugin/issues/27)にしたがって以下の点が変更されています．
@@ -36,6 +33,9 @@ yarn vsce
 ```
 
 VSCodeの「拡張機能」→「VSIXからインストール」より，`build/cloudlatex-2.0.0.vsix`をインストールしてください．
+
+<details>
+<summary>⚠Following sections is under development and not completed. </summary>
 
 ## Features
 - Multi-platform
