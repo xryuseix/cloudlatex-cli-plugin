@@ -13,6 +13,29 @@ If you use VSCode, you can use [Cloud LaTeX VSCode Extension](https://github.com
 <details>
 <summary>⚠Following sections is under development and not completed. </summary>
 
+## このレポジトリは[cloudlatex-cli-plugin](https://github.com/cloudlatex-team/cloudlatex-cli-plugin)からフォークされています
+
+[issues/27](https://github.com/cloudlatex-team/cloudlatex-cli-plugin/issues/27)にしたがって以下の点が変更されています．
+
+* 隠しファイルの同期をスキップ
+* node_modulesの同期をスキップ
+
+フォーク元ではなく本レポジトリを使用した場合の一切の責任を負いません．また，本レポジトリの使用はcloudlatex-teamさんの許可をとっていません．そのため，予告なく削除される場合があります．
+
+### 本レポジトリの使用手順
+
+```bash
+git clone https://github.com/xryuseix/cloudlatex-cli-plugin
+git clone https://github.com/cloudlatex-team/cloudlatex-vscode-extension
+cd cloudlatex-cli-plugin
+yarn && yarn build
+cd ../cloudlatex-vscode-extension
+yarn
+cp -y -r ../cloudlatex-cli-plugin/dist node_modules/cloudlatex-cli-plugin
+yarn vsce
+```
+
+VSCodeの「拡張機能」→「VSIXからインストール」より，`build/cloudlatex-2.0.0.vsix`をインストールしてください．
 
 ## Features
 - Multi-platform
